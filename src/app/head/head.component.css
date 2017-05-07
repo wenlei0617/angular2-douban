@@ -1,0 +1,36 @@
+.title{
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    font-size: 20px;
+    font-weight: normal;
+    color: #00b600;
+    display: inline-flex;
+}
+ul{
+    display: inline-flex;
+}
+li{
+    margin-left: 15px;
+}
+.movie{
+    color: #2384E8;
+}
+.book{
+    color: #9F7860;
+}
+.guangbo{
+    color: #E4A813;
+}
+.xiaozu{
+    color: #2AB8CC;
+}
+img{
+    width: 25px;
+}
+header{
+    border-bottom: 1px solid #eee;
+}

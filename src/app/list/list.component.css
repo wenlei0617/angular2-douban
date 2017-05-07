@@ -1,0 +1,38 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.nav h1{
+    font-size: 14px;
+    font-weight: normal;
+    color: #111;
+}
+.nav span{
+    color: #42bd56;
+    font-size: 12px;
+}
+.listcontent{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.listcontent ul{
+    padding: 20px;
+}
+.listcontent li{
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+}
+.listcontent li img{
+    width: 100px;
+    height: 142px;
+}
+.listcontent li p:nth-of-type(1){
+    color: #111;
+    font-size: 14px;
+}
+.listcontent li p:nth-of-type(2){
+    color: #aaa;
+    font-size: 10px;
+}
