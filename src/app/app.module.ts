@@ -2,24 +2,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.router';
 
 import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { ListComponent } from './list/list.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadComponent,
-    ListComponent
+    ListComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule
-    // InMemoryWebApiModule.forRoot()
+    JsonpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
