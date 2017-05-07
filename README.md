@@ -1,4 +1,4 @@
-# Angular2-douban
+# Angular2-douban(基于angular2脚手架)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
