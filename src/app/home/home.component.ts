@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   private hotMovies;
   private onlineMovies;
   private newMovies;
+  private hotmoviesId = 108288;
+  private onlinemoviesId = 108288;
+  private newmoviesId = 108288;
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit() {

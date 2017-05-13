@@ -1,14 +1,16 @@
 <div class="content">
   <div class="nav">
     <h1>{{movies?.subject_collection.name}}</h1>
-    <span>更多</span>
+    <span><a class="list_more" routerLink="/more/{{moviesId}}">更多</a></span>
   </div>
   <div class="listcontent">
     <ul>
       <li *ngFor="let movie of movies?.subject_collection_items">
-        <img src="{{movie.cover.url}}" alt="">
-        <p>{{movie.title}}</p>
-        <p>评分：{{movie.rating?.value || '未评分'}}</p>
+        <a routerLink="/">
+          <img src="{{movie.cover.url}}" alt="">
+          <p>{{movie.title}}</p>
+          <p>评分：{{movie.rating?.value || '未评分'}}</p>
+        </a>
       </li>
     </ul>
   </div>

@@ -1,0 +1,11 @@
+<app-head></app-head>
+<div class="more_content">
+  <h1>影院热映</h1>
+  <section>
+    <a class="more_item" *ngFor="let item of MoviesList?.subject_collection_items">
+      <img src="{{item.cover.url}}" alt="">
+      <p>{{item.title}}</p>
+      <p>评分：{{item.rating?item.rating.value:'占无评分'}}</p>
+    </a>
+  </section>
+</div>

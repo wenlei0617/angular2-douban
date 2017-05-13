@@ -12,6 +12,9 @@
     color: #42bd56;
     font-size: 12px;
 }
+.list_more{
+    color: #42bd56;
+}
 .listcontent{
     overflow-x: auto;
     white-space: nowrap;

@@ -10,6 +10,7 @@ import { HeadComponent } from './head/head.component';
 import { ListComponent } from './list/list.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { MoreComponent } from './more/more.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     HeadComponent,
     ListComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,
