@@ -12,25 +12,25 @@ export class HomeComponent implements OnInit {
   private hotMovies;
   private onlineMovies;
   private newMovies;
-  private hotmoviesId = 108288;
-  private onlinemoviesId = 108288;
-  private newmoviesId = 108288;
+  private hotmoviesId = 'hot';
+  private onlinemoviesId = 'online';
+  private newmoviesId = 'new';
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit() {
-    this.moviesService.getHotMovies().then(res => {
+    this.moviesService.getHotMovies(8).then(res => {
       this.hotMovies = res;
     }).catch(err => {
       console.log(err);
     });
 
-    this.moviesService.getOnlineMovies().then(res => {
+    this.moviesService.getOnlineMovies(8).then(res => {
       this.onlineMovies = res;
     }).catch(err => {
       console.log(err);
     })
 
-    this.moviesService.getNewMovies().then(res => {
+    this.moviesService.getNewMovies(8).then(res => {
       this.newMovies = res;
     }).catch(err => {
       console.log(err);

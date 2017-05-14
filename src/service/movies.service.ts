@@ -9,8 +9,13 @@ import 'rxjs/add/operator/map';
 export class MoviesService {
     constructor(private jsonp: Jsonp ) {}
 
-    getHotMovies() {
-        let api_url = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items';
+    getHotMovies(count=0) {
+        var api_url = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items?start=0';
+        
+        if (count != 0) {
+            api_url = api_url + '&count=' + count;
+        }
+
         return new Promise(function(resolve, reject) {
             jsonp(api_url,null,function(err, data) {
                 if ( err ) {
@@ -22,8 +27,12 @@ export class MoviesService {
         })
     }
 
-    getOnlineMovies() {
-        let api_url = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_free_stream/items';
+    getOnlineMovies(count=0) {
+        var api_url = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_free_stream/items?start=0';
+
+        if (count != 0) {
+            api_url = api_url + '&count=' + count;
+        }
 
         return new Promise(function(resolve, reject) {
             jsonp(api_url,null,function(err, data) {
@@ -36,8 +45,12 @@ export class MoviesService {
         })
     }
 
-    getNewMovies() {
-        let api_url = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_latest/items';
+    getNewMovies(count=0) {
+        var api_url = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_latest/items?start=0';
+
+        if (count != 0) {
+            api_url = api_url + '&count=' + count;
+        }
 
         return new Promise(function(resolve, reject) {
             jsonp(api_url,null,function(err, data) {

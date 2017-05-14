@@ -36,6 +36,8 @@
     color: #494949;
     overflow: hidden;  
     text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
 }
 .more_item p:nth-of-type(2){
     color: #9b9b9b;

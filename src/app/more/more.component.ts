@@ -19,13 +19,23 @@ export class MoreComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(res => {
-      res.id;
-      this.movies.getMoreMovies(res.id).then(r=>{
-        console.log(r);
-        this.MoviesList = r;
-      }).catch(err => {
-        console.log(err);
-      })
+      switch(res.id) {
+        case 'hot':
+          this.movies.getHotMovies().then(res => {
+            this.MoviesList = res;
+          })
+        break;
+        case 'online':
+          this.movies.getOnlineMovies().then(res => {
+            this.MoviesList = res;
+          })
+        break;
+        case 'new':
+          this.movies.getNewMovies().then(res => {
+            this.MoviesList = res;
+          })
+        break;
+      }
     })
 
   }
