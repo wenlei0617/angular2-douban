@@ -62,4 +62,18 @@ export class MoviesService {
             })
         })
     }
+
+    getDetailMovies(id) {
+        let api_url = 'https://api.douban.com/v2/movie/subject/'+id;
+
+        return new Promise(function(resolve, reject) {
+            jsonp(api_url, null, function(err, data) {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(data)
+                }
+            })
+        })
+    }
 }

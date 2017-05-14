@@ -11,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MoreComponent } from './more/more.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MoreComponent } from './more/more.component';
     ListComponent,
     FooterComponent,
     HomeComponent,
-    MoreComponent
+    MoreComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<app-head></app-head>
+<div class="detail_head">
+  <h1>{{movieDetail?.title}}</h1>
+  <p>
+    评分：{{movieDetail?.rating?.average}}
+    <span>{{movieDetail?.ratings_count}}评价</span>
+  </p>
+  <p>{{movieDetail?.year}}
+    （{{movieDetail?.countries}}）/
+    <small *ngFor="let genres of movieDetail?.genres">
+      {{genres}}/
+    </small>
+    <small *ngFor="let name of movieDetail?.casts">
+      {{name.name}}/
+    </small>
+    {{movieDetail?.mainland_pubdate}}（中国大陆）上映</p>
+</div>
+<img src="{{movieDetail?.images.large}}" class="detail_img" alt="">
+<div class="detail_btn">
+  <a href="">想看</a>
+  <a href="">看过</a>
+</div>
+<div class="detail_text">{{movieDetail?.title}}的剧情简介
+  <p>{{movieDetail?.summary}}</p>
+</div>
+

@@ -1,0 +1,45 @@
+.detail_head h1{
+    margin: 30px 0 5px;
+    font-size: 24px;
+    line-height: 32px;
+    word-break: break-all;
+    font-weight: normal;
+}
+.detail_head{
+    padding: 0 18px;
+    width: 64%;
+    float: left;
+}
+.detail_head p:nth-of-type(1){
+    color: #494949;
+    font-size: 15px;
+    padding-right: 8px;
+}
+.detail_head p span{
+    color: #aaa;
+}
+.detail_head p:nth-of-type(2){
+    color: #494949;
+    font-size: 14px;
+}
+.detail_img{
+    float: right;
+    width: 19%;
+    margin-top: 70px;
+    margin-right: 20px;
+}
+.detail_btn{
+    clear: both;
+    display: flex;
+    text-align: center;
+    padding: 10px 30px;
+}
+.detail_btn a {
+    flex: 1;
+    border: 1px solid #ffb712;
+    color: #ffb712;
+    padding: 6px;
+}
+.detail_text{
+    padding:20px 18px;
+}

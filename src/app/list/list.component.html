@@ -6,7 +6,7 @@
   <div class="listcontent">
     <ul>
       <li *ngFor="let movie of movies?.subject_collection_items">
-        <a routerLink="/">
+        <a routerLink="/detail/{{movie.id}}">
           <img src="{{movie.cover.url}}" alt="">
           <p>{{movie.title}}</p>
           <p>评分：{{movie.rating?.value || '未评分'}}</p>
