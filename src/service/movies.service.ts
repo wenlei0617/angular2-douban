@@ -76,4 +76,18 @@ export class MoviesService {
             })
         })
     }
+
+    getPhotoMovies(id) {
+        let api_url = 'https://api.douban.com/v2/movie/celebrity/'+id+'/photos';
+
+        return new Promise(function(resolve, reject) {
+            jsonp(api_url, null, function(err, data) {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(data)
+                }
+            })
+        })
+    }
 }

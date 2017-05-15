@@ -17,10 +17,31 @@
 </div>
 <img src="{{movieDetail?.images.large}}" class="detail_img" alt="">
 <div class="detail_btn">
-  <a href="">想看</a>
-  <a href="">看过</a>
+  <a href="">想看({{movieDetail?.wish_count}})</a>
+  <a href="">看过({{movieDetail?.collect_count }})</a>
 </div>
-<div class="detail_text">{{movieDetail?.title}}的剧情简介
+<div class="detail_text">
+  <p class="detail_p">{{movieDetail?.title}}的剧情简介</p>
   <p>{{movieDetail?.summary}}</p>
+</div>
+
+<div class="detail_text">
+  <p class="detail_p">{{movieDetail?.title}}的预告片和图片</p>
+</div>
+
+<div class="detail_text">
+  <p class="detail_p">{{movieDetail?.title}}的短评（{{movieDetail?.comments_count}}）</p>
+  <div class="evaluate">
+    <img src="https://img3.doubanio.com/icon/up32842549-6.jpg" alt="">
+    <div>
+      <h3>名字 <span>1星</span></h3>
+      <p>时间</p>
+      <p>sfdfsdfsdfsdfsd</p>      
+    </div>
+  </div>
+</div>
+
+<div class="detail_text">
+  <p class="detail_p">{{movieDetail?.title}}的影评（{{movieDetail?.reviews_count}}）</p>
 </div>
 

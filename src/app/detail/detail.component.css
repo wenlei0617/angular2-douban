@@ -43,3 +43,30 @@
 .detail_text{
     padding:20px 18px;
 }
+.detail_text .detail_p {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.detail_text p:nth-of-type(2) {
+    color: #494949;
+    font-size: 15px;
+}
+.evaluate img{
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+}
+.evaluate div{
+    margin-left: 50px;
+}
+.evaluate div h3{
+    color: #494949;
+    font-size: 15px;
+    font-weight: normal;
+}
+.evaluate div h3 span{
+    color: #aaa;
+    font-size: 12px;
+}

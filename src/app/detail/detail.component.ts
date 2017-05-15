@@ -19,8 +19,11 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(res => {
       this.movies.getDetailMovies(res.id).then(r => {
-        console.log(r);
         this.movieDetail = r;
+      })
+      
+      this.movies.getPhotoMovies(res.id).then(r => {
+        console.log(r);
       })
     })
   }
