@@ -10,6 +10,8 @@ import { MoviesService } from './../../service/movies.service';
 })
 export class DetailComponent implements OnInit {
   private movieDetail;
+  private movieComments;
+  private moviePhoto;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +26,11 @@ export class DetailComponent implements OnInit {
       
       this.movies.getPhotoMovies(res.id).then(r => {
         console.log(r);
+        this.moviePhoto = r;
+      })
+
+      this.movies.getCommentsMovies(res.id).then(r => {
+        this.movieComments = r;
       })
     })
   }

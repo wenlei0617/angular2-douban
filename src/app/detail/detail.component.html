@@ -27,16 +27,21 @@
 
 <div class="detail_text">
   <p class="detail_p">{{movieDetail?.title}}的预告片和图片</p>
+  <ul>
+    <li *ngFor="let item of moviePhoto?.photos">
+      <img src="{{item.image.large.url}}" alt="">
+    </li>
+  </ul>
 </div>
 
 <div class="detail_text">
   <p class="detail_p">{{movieDetail?.title}}的短评（{{movieDetail?.comments_count}}）</p>
-  <div class="evaluate">
-    <img src="https://img3.doubanio.com/icon/up32842549-6.jpg" alt="">
+  <div class="evaluate" *ngFor="let item of movieComments?.interests">
+    <img src="{{item.user.avatar}}" alt="">
     <div>
-      <h3>名字 <span>1星</span></h3>
-      <p>时间</p>
-      <p>sfdfsdfsdfsdfsd</p>      
+      <h3>{{item.user.name}} <span>{{item.rating.value}}星</span></h3>
+      <p>{{item.create_time}}</p>
+      <p>{{item.comment}}</p>      
     </div>
   </div>
 </div>
