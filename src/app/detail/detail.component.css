@@ -83,3 +83,13 @@
     line-height: 22px;
     font-size: 15px;
 }
+.detail_content{
+    width: 100%;
+    overflow-x: auto;
+}
+.detail_content ul{
+    white-space: nowrap;
+}
+.detail_content li{
+    display: inline-block;
+}

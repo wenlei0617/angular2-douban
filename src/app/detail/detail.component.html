@@ -27,11 +27,13 @@
 
 <div class="detail_text">
   <p class="detail_p">{{movieDetail?.title}}的预告片和图片</p>
-  <ul>
-    <li *ngFor="let item of moviePhoto?.photos">
-      <img src="{{item.image.large.url}}" alt="">
-    </li>
-  </ul>
+  <div class="detail_content">
+    <ul>
+      <li *ngFor="let item of moviePhoto?.photos">
+        <img src="{{item.image.large.url}}" alt="">
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div class="detail_text">
